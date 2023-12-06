@@ -22,7 +22,13 @@ from collections import OrderedDict
 def frequencies(items):
     frequencies = {}
     myDict = dict()
-    for index, element in enumerate(sorted(map(str, set(items)))):
-        myDict[element] = items.count(element)
+    """for index, element in enumerate(sorted(map(str, set(items)))):
+        myDict[element] = items.count(element)"""
+    for item in items:
+        item_string = str(item)
+        if item_string in myDict:
+            myDict[item_string]+=1
+        else:
+            myDict[item_string]=1
     frequencies = myDict
     return frequencies
