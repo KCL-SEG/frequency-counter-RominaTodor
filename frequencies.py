@@ -19,14 +19,10 @@ def frequencies(items):
 """
 from collections import OrderedDict
 
-print("Enter a list separated by commas: ")
-originalList = [str(value).strip() for value in input().split(",")]
-originalListSize = len(originalList)
-newList = list(OrderedDict.fromkeys(originalList))
-newListSize = len(newList)
-
-myDict = dict()
-for index, element in enumerate(newList):
-    myDict[element] = index
-    myDict[element] = originalList.count(element)
-print(myDict)
+def frequencies(items):
+    frequencies = {}
+    myDict = dict()
+    for index, element in enumerate(list(sorted(set(items)))):
+        myDict[element] = items.count(element)
+        frequencies = myDict
+    return frequencies
