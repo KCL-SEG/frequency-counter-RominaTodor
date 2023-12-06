@@ -24,5 +24,5 @@ def frequencies(items):
     myDict = dict()
     for index, element in enumerate(list(sorted(set(items)))):
         myDict[element] = items.count(element)
-        frequencies = myDict
+    frequencies = myDict
     return frequencies
